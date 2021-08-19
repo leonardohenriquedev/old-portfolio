@@ -335,11 +335,3 @@ date: 2021-08-19
 
 
 <p>Fonte: <a href="https://blog.betrybe.com/tecnologia/tecnologia-financeira/" rel="noreferrer noopener" target="_blank">Blog da Trybe</a></p>
-
-		 
-			</div>
-		</div>
-	
-	
-
-
