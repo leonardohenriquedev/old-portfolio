@@ -1,26 +1,44 @@
 
 .title{
 	font-family: 'Montserrat', sans-serif;
+	text-align: center;
 	
 }
 
 .subtitle{
 	font-family: 'Montserrat', sans-serif;
-
+	text-align: center;
 }
 
 body{
 	background-color: rgb(235, 235, 235);
 	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	
 }
 
-.perfil-pic{
-border-radius: 50%;
-width: 6em;
-height: 6em;
+.profile-pic{
+	
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 150px;
+	height:9em;
+	margin-bottom: 10px;
+
 }
 
 .links{
 	text-decoration: none;
 	color: rgb(145, 145, 145);
+	
+}
+
+.list{
+
+	line-height: 25px;
+
+
+
 }
