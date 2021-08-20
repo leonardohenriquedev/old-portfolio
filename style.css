@@ -7,7 +7,9 @@
 
 .subtitle{
 	font-family: 'Montserrat', sans-serif;
-	text-align: center;
+	
+	
+	
 }
 
 body{
@@ -36,9 +38,7 @@ body{
 }
 
 .list{
-
 	line-height: 25px;
-
-
+	margin-bottom: 50px;
 
 }
