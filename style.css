@@ -1,7 +1,23 @@
+body{
+	
+	background-color: rgb(235, 235, 235);
+	font-family: 'Montserrat', sans-serif;
+	width: 550px;
+	
+	margin-left: auto;
+	margin-right: auto;
+
+	
+}
+
+div{
+	border: 2px solid rgb(235, 235, 235);
+}
+
 
 .title{
 	font-family: 'Montserrat', sans-serif;
-	text-align: center;
+	
 	
 }
 
@@ -12,16 +28,38 @@
 	
 }
 
-body{
-	background-color: rgb(235, 235, 235);
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
+
+.header-top{
+	height: 160px;
+	position: relative;
 	
 }
 
+.profile{
+float: left;
+display: inline-block;
+}
+
+.description{
+text-align: left;
+margin-left: 170px;
+margin-top: 6%;
+
+
+
+
+
+
+
+
+}
+
+
+
 .profile-pic{
 	
-	display: block;
+	/* estudar sobre as 3 primeiras linhas  */
+	display: block; 
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
