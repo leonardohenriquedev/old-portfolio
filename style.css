@@ -6,16 +6,26 @@ body{
 	
 	margin-left: auto;
 	margin-right: auto;
+	background-image: url("images/4847466.jpg");
+	background-size: 200%;
+	background-size: cover;
+	background-size: 150%;
+	color: rgb(54, 54, 54);
+	/* text-shadow: 2px 2px black; */
+	
+	
+	
 }
 
 div{
-	border: 2px solid rgb(235, 235, 235);
+	/* border: 2px solid rgb(235, 235, 235); */
 }
 
-.title{
+.title, #listaHab{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
 	font-style: italic;
+	
 }
 
 .subtitle{
@@ -25,6 +35,7 @@ div{
 .header-top{
 	height: 160px;
 	position: relative;
+	display: block;
 }
 
 .profile{
@@ -35,7 +46,10 @@ div{
 .description{
 	text-align: left;
 	margin-left: 170px;
-	margin-top: 6%;
+	display: block;
+	padding-top: 20px;
+	
+	
 }
 
 .profile-pic{
@@ -45,7 +59,12 @@ div{
 
 .links{
 	text-decoration: none;
-	color: rgb(145, 145, 145);
+	color: rgb(0, 133, 11);
+}
+
+.linkedin{
+	text-decoration: none;
+	color: rgb(41, 80, 189);
 }
 
 .list{
