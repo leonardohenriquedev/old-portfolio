@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+#firstColor {
+  background-color: black;
+}
+
+#secondColor {
+  background-color: magenta;
+}
+
+#thirdColor {
+  background-color: violet;
+}
+
+#fourthColor {
+  background-color: darkorchid;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 1px 2px;
+  display: inline-block;
+}
+
+button {
+  margin: 0.5em;
+}
+
+input {
+  width: 70px;
+}
+
+#title {
+  margin: 15px;
+}
