@@ -110,17 +110,17 @@ window.onload = function() {
           }
         }
 
-      } else if (tamanho > 50) {
+      } else if (tamanho > 30) {
         if (board.firstElementChild != null) {
           for (let index = 0; index < board.children.length; index = 0) {
             board.firstElementChild.remove();
           }
         }
-        for (let line = 0; line < 50; line++) {
+        for (let line = 0; line < 30; line++) {
           let lineCreated = document.createElement('div');
           lineCreated.className = 'line';
           board.appendChild(lineCreated);
-          for (let pixel = 0; pixel < 50; pixel++) {
+          for (let pixel = 0; pixel < 30; pixel++) {
             let pixelCreated = document.createElement('div');
             pixelCreated.className = 'pixel';
             board.children[line].appendChild(pixelCreated);
