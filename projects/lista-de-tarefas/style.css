@@ -5,6 +5,7 @@
 body {
   background-color: #40ad40;
   font-family: 'Montserrat', sans-serif;
+  user-select: none;
 }
 
 header {
@@ -41,6 +42,7 @@ button {
   outline: none;
   padding: 4px 8px;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  user-select: none;
 }
 
 button:hover {

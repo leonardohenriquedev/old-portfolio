@@ -24,19 +24,24 @@ window.onload = function() {
 
   function setBackGround(event) {
     if (event.target.tagName == 'LI') {
-      for (let index = 0; index < listaTarefas.children.length; index++) {
-        listaTarefas.children[index].style.backgroundColor = '';
-      }
       if (event.target.style.backgroundColor == 'rgb(128, 128, 128)') {
         event.target.style.backgroundColor = '';
-      } else event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+      } else {
+        for (let index = 0; index < listaTarefas.children.length; index++) {
+          listaTarefas.children[index].style.backgroundColor = '';
+        }
+        event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+      }
     }
   }
 
   function setCompleted(event) {
-    if ((event.target.className) == '') {
-      event.target.classList.add('completed');
-    } else event.target.className = ('');
+    if (event.target.tagName == 'LI') {
+      //poderia utilizar toggle
+      if ((event.target.className) == '') {
+        event.target.classList.add('completed');
+      } else event.target.className = ('');
+    }
   }
 
   function clearList() {
