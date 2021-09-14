@@ -2,6 +2,7 @@ body {
   text-align: center;
   background-image: url('https://cdnb.artstation.com/p/assets/images/images/035/834/987/original/jordan-pak-lofi.gif?1616014770');
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .color {

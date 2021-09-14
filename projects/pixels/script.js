@@ -1,6 +1,9 @@
 var tamanho;
 window.onload = function() {
 
+  let audio = document.querySelector('audio');
+  audio.volume = 0.02;
+
   function createFirstBoard() {
 
     let board = document.getElementById('pixel-board');
@@ -41,12 +44,13 @@ window.onload = function() {
   let color = document.getElementById('color-palette')
 
   color.addEventListener('click', function(event) {
+    if (event.target.className == 'color') {
 
-    for (let index = 0; index < color.children.length; index++) {
-      color.children[index].className = 'color';
+      for (let index = 0; index < color.children.length; index++) {
+        color.children[index].className = 'color';
+      }
+      event.target.classList.add('selected');
     }
-    event.target.classList.add('selected');
-
   })
 
 
