@@ -1,10 +1,6 @@
 var tamanho;
 window.onload = function() {
 
-  let audio = document.querySelector('audio');
-  audio.volume = 0.02;
-
-
   function createFirstBoard() {
 
     let board = document.getElementById('pixel-board');
