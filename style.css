@@ -1,73 +1,68 @@
-body{
-	
-	background-color: rgb(235, 235, 235);
-	font-family: 'Montserrat', sans-serif;
-	width: 580px;
-	
-	margin-left: auto;
-	margin-right: auto;
-	background-image: url("images/4847466.jpg");
-	background-size: 200%;
-	background-size: cover;
-	background-size: 150%;
-	color: rgb(54, 54, 54);
-	/* text-shadow: 2px 2px black; */
-	
-	
-	
+body {
+  background-color: rgb(68, 168, 9);
+  font-family: 'Montserrat', sans-serif;
+  width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(54, 54, 54);
 }
 
-div{
-	/* border: 2px solid rgb(235, 235, 235); */
+main {
+  background-color: white;
+  padding: 0px 15px;
+  border-radius: 15px;
 }
 
-.title, #listaHab{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 800;
-	font-style: italic;
-	
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  padding-top: 10px;
 }
 
-.subtitle{
-	font-family: 'Montserrat', sans-serif;
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.header-top{
-	height: 160px;
-	position: relative;
-	display: block;
+.header-top {
+  height: 160px;
+  position: relative;
+  display: block;
 }
 
-.profile{
-	float: left;
-	display: inline-block;
+.profile {
+  float: left;
+  display: inline-block;
 }
 
-.description{
-	text-align: left;
-	margin-left: 170px;
-	display: block;
-	padding-top: 20px;
-	
-	
+.description {
+  text-align: left;
+  margin-left: 170px;
+  display: block;
+  padding-top: 20px;
 }
 
-.profile-pic{
-	width:152px;
-	border-radius: 50%;	
+.profile-pic {
+  width: 152px;
+  border-radius: 50%;
 }
 
-.links{
-	text-decoration: none;
-	color: rgb(0, 133, 11);
+.github {
+  text-decoration: none;
+  color: rgb(0, 133, 11);
 }
 
-.linkedin{
-	text-decoration: none;
-	color: rgb(41, 80, 189);
+.linkedin {
+  text-decoration: none;
+  color: rgb(41, 80, 189);
 }
 
-.list{
-	line-height: 25px;
-	margin-bottom: 50px;
+.projetos {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.list {
+  line-height: 25px;
+  margin-bottom: 50px;
 }

@@ -49,3 +49,12 @@ input {
   margin: 15px;
   color: white;
 }
+
+footer {
+  height: 30px;
+  margin-top: 25px;
+}
+
+audio {
+  height: 90%;
+}

@@ -3,22 +3,24 @@
 }
 
 body {
-  background-color: #40ad40;
+  background-color: #FFFF99;
   font-family: 'Montserrat', sans-serif;
   user-select: none;
 }
 
 header {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 20px;
   max-width: max-content;
   margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
+  padding-right: 200px;
+  /* min-width: max-content; */
 }
 
-li {
+#lista-tarefas {
   user-select: none;
 }
 

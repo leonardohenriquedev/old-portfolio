@@ -26,12 +26,13 @@ window.onload = function() {
     if (event.target.tagName == 'LI') {
       if (event.target.style.backgroundColor == 'rgb(128, 128, 128)') {
         event.target.style.backgroundColor = '';
-      } else {
-        for (let index = 0; index < listaTarefas.children.length; index++) {
-          listaTarefas.children[index].style.backgroundColor = '';
-        }
-        event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+        return;
       }
+      for (let index = 0; index < listaTarefas.children.length; index++) {
+        listaTarefas.children[index].style.backgroundColor = '';
+      }
+      event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+
     }
   }
 
