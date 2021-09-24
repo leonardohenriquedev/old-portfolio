@@ -1,68 +1,173 @@
-body {
-  background-color: rgb(68, 168, 9);
-  font-family: 'Montserrat', sans-serif;
-  width: 580px;
-  margin-left: auto;
-  margin-right: auto;
-  color: rgb(54, 54, 54);
-}
-
-main {
-  background-color: white;
-  padding: 0px 15px;
-  border-radius: 15px;
-}
-
-.title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-style: italic;
-  padding-top: 10px;
-}
-
-.subtitle {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.header-top {
-  height: 160px;
-  position: relative;
-  display: block;
-}
-
-.profile {
-  float: left;
-  display: inline-block;
-}
-
-.description {
-  text-align: left;
-  margin-left: 170px;
-  display: block;
-  padding-top: 20px;
-}
-
-.profile-pic {
-  width: 152px;
-  border-radius: 50%;
-}
-
-.github {
-  text-decoration: none;
-  color: rgb(0, 133, 11);
-}
-
-.linkedin {
-  text-decoration: none;
-  color: rgb(41, 80, 189);
-}
-
-.projetos {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
-.list {
-  line-height: 25px;
-  margin-bottom: 50px;
-}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+      }
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(43, 43, 43);
+      }
+      
+       ::selection {
+        color: white;
+        background: #00ff9541;
+      }
+      
+      .header i {
+        margin-top: 5px;
+        font-size: 25px;
+      }
+      
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 100px;
+        margin-bottom: 10px;
+      }
+      
+      .header .links .link {
+        margin-left: 70px;
+      }
+      
+      .header .links .link:hover {
+        color: #3ccf91;
+      }
+      
+      .link {
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      .welcome {
+        display: flex;
+        flex-direction: column;
+        margin: 50px 100px;
+        font-size: 1.5em;
+        justify-content: flex-start;
+      }
+      
+      .welcome div {
+        margin-bottom: 30px;
+      }
+      
+      .presentation p {
+        color: #3ccf91;
+        font-weight: 600;
+      }
+      
+      .green {
+        color: #3ccf91;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      
+      .course {
+        font-weight: 600;
+      }
+      
+      .infos p {
+        margin-bottom: 2px;
+      }
+      
+      .social-links {
+        display: flex;
+        margin-top: 30px;
+      }
+      
+      .social-links a {
+        margin-right: 50px;
+        color: white;
+        opacity: 0.5;
+      }
+      
+      .social-links a:hover {
+        opacity: 1;
+      }
+      
+      .social-link {
+        text-decoration: none;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 1px solid red; */
+      }
+      
+      .social-link i {
+        color: #3ccf91;
+        margin-right: 10px;
+      }
+      
+      @keyframes pisca {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        50% {
+          opacity: 0.0;
+        }
+      }
+      
+      .pisca {
+        -webkit-animation: pisca 1.5s linear infinite;
+        -moz-animation: pisca 1.5s linear infinite;
+        -ms-animation: pisca 1.5s linear infinite;
+        -o-animation: pisca 1.5s linear infinite;
+        animation: pisca 1.5s linear infinite;
+      }
+      
+      .main {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        text-align: center;
+        background-color: #3ccf91;
+      }
+      
+      footer p {
+        color: black;
+      }
+      
+      .typedtext {
+        border-right: 2px solid black;
+        animation: blinkTextCursor 800ms steps(44) infinite normal;
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+      }
+      
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: black;
+        }
+        to {
+          border-right-color: transparent;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .social-link {
+          font-size: 15px;
+        }
+      }
+      
+      @media screen and (min-width: 1024px) {
+        .welcome {
+          font-size: 2em;
+        }
+      }
