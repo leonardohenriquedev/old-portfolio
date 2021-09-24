@@ -46,13 +46,13 @@
       .welcome {
         display: flex;
         flex-direction: column;
-        margin: 50px 100px;
+        margin: 10px 100px;
         font-size: 1.5em;
         justify-content: flex-start;
       }
       
       .welcome div {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
       
       .presentation p {
