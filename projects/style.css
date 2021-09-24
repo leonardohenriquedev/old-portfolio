@@ -177,3 +177,32 @@
           font-size: 30px;
         }
       }
+      
+      .project-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+        justify-content: space-around;
+        align-self: center;
+      }
+      
+      .project-container a img {
+        width: 200px;
+        opacity: 0.5;
+      }
+      
+      .project-container a img:hover {
+        opacity: 1;
+      }
+      
+      .project {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid white; */
+        align-items: center;
+      }
+      
+      .project p {
+        margin-bottom: 10px;
+      }
