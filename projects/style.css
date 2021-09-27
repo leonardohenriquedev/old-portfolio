@@ -4,6 +4,13 @@
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
         color: white;
+        background-color: #121212;
+      }
+      
+      main {
+        display: flex;
+        height: 90vh;
+        align-items: center;
       }
       
       body {
@@ -26,8 +33,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 100px;
-        margin-bottom: 10px;
+        margin: 10px 100px;
       }
       
       .header .links .link {
@@ -160,30 +166,11 @@
         }
       }
       
-      @media screen and (max-width: 600px) {
-        .social-link {
-          font-size: 15px;
-        }
-        .typedtext {
-          font-size: 25px;
-        }
-      }
-      
-      @media screen and (min-width: 1024px) {
-        .welcome {
-          font-size: 2em;
-        }
-        .typedtext {
-          font-size: 30px;
-        }
-      }
-      
       .project-container {
+        /* border: 1px solid white; */
         display: flex;
         flex-wrap: wrap;
-        max-width: 900px;
-        justify-content: space-around;
-        align-self: center;
+        width: 100%;
       }
       
       .project-container a img {
@@ -200,9 +187,40 @@
         display: flex;
         flex-direction: column;
         /* border: 2px solid white; */
-        align-items: center;
+        align-items: flex-start;
+      }
+      
+       ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+       ::-webkit-scrollbar-track {
+        background-color: rgb(63, 63, 63);
+      }
+      
+       ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 6px #3ccf91;
       }
       
       .project p {
+        font-size: 25px;
         margin-bottom: 10px;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .social-link {
+          font-size: 15px;
+        }
+        .typedtext {
+          font-size: 25px;
+        }
+      }
+      
+      @media screen and (min-width: 1024px) {
+        .welcome {
+          font-size: 2em;
+        }
+        .typedtext {
+          font-size: 30px;
+        }
       }
