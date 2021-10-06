@@ -3,7 +3,7 @@
  * It types an array of texts in a random order. I like random stuff🙃
  */
 function typingEffect() {
-  const contactTexts = shuffleArray([' do Brasil 🇧🇷', 'da America Latina 🔥', 'do Mundo 🌍', 'das Galaxias 🛸', 'de Todas 😎']);
+  const contactTexts = shuffleArray(['do Mundo 🌍', 'das Galaxias 🛸', 'de Todas 😎']);
   const typedtext = document.getElementsByClassName("typedtext")[0];
   let removing = false;
   let idx = char = 0;
