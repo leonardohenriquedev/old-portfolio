@@ -53,13 +53,22 @@
       .welcome {
         display: flex;
         flex-direction: column;
-        font-size: 1.5em;
         justify-content: center;
         height: 100vh;
+        width: 900px;
       }
       
       .welcome div {
         margin-bottom: 30px;
+      }
+      
+      .hero {
+        display: flex
+      }
+      
+      .img-hero {
+        width: 550px;
+        margin-bottom: 80px;
       }
       
       .presentation p {
@@ -209,7 +218,7 @@
         box-shadow: inset 0 0 6px #3ccf91;
       }
       
-      @media screen and (max-width: 490px) {
+      @media screen and (max-width: 376px) {
         .social-link {
           font-size: 15px;
         }
@@ -227,22 +236,41 @@
           margin: 0 20px;
           margin-bottom: 10px;
         }
+        .about-me {
+          display: flex;
+          width: 85vw;
+        }
+        .img-description {
+          display: none;
+        }
+        .img-hero {
+          display: none;
+        }
       }
       
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 768px) {
         .social-link {
           font-size: 15px;
         }
         .typedtext {
           font-size: 25px;
         }
+        .description {
+          width: 500px;
+        }
+        .img-description {
+          display: none;
+        }
+        .img-hero {
+          display: none;
+        }
       }
       
       @media screen and (min-width: 1024px) {
         .welcome {
-          font-size: 2em;
+          font-size: 1.5em;
         }
         .typedtext {
-          font-size: 30px;
+          font-size: 25px;
         }
       }
