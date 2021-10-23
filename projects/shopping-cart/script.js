@@ -143,7 +143,7 @@ const createSections = async(input) => {
     setTimeout( () => {
       const buttonAdd = document.querySelectorAll( '.item__add' )[ index ];
       buttonAdd.addEventListener( 'click', addToCart );
-    }, 500 );
+    }, 1000 );
   } );
   sectionItem.removeChild( sectionItem.children[ 0 ] );
 };
@@ -194,7 +194,7 @@ window.onload = () => {
       loading.innerText = 'carregando...';
       sectionItem.appendChild( loading );
 
-      createSections( input );
+      createSections( input.value);
     }
   } )
 
