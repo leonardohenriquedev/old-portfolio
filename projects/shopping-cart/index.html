@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Trybe Shopping</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./helpers/fetchItem.js" defer></script>
+  <script src="./helpers/fetchProducts.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="./helpers/saveCartItems.js" defer></script>
+  <script src="./helpers/getSavedCartItems.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="carts.png" id="icon">
+
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="img"><img src="carts.png" alt=""></div>
+    <div class="trybe"><b>Trybe</b>Shopping</div>
+    <input type="text" placeholder="Digite para pesquisar">
+
+  </div>
+  <div class="header-2"><span>Meu Carrinho</span>
+  </div>
+  <section class="container">
+    <section class="items"></section>
+    <section class="cart">
+      <span class="cart__title">Carrinho de compras</span>
+      <!-- <button class="empty-cart">Esvaziar carrinho</button> -->
+      <div class="cart__items"></div>
+    </section>
+
+  </section>
+</body>
+
+</html>
