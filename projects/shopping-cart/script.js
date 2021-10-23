@@ -105,6 +105,7 @@ const addToCart = async( event ) => {
       localStorage.setItem( 'cartValue', cart.lastElementChild.innerHTML );
       cart.removeChild( cart.children[ 4 ] )
       cart.removeChild( cart.children[ 3 ] )
+      localStorage.setItem( 'btnClear', btnClear );
     } );
     localStorage.setItem( 'btnClear', btnClear );
 
@@ -117,7 +118,7 @@ const addToCart = async( event ) => {
 
 
 
-const generateItems = async( input = 'chocolate' ) => {
+const generateItems = async( input = 'iphone' ) => {
   const items = await fetchProducts( input );
   const newItems = [];
 
@@ -132,12 +133,9 @@ const generateItems = async( input = 'chocolate' ) => {
 
 const sectionItem = document.querySelector( '.items' );
 
-const createSections = async( input ) => {
-  if ( !input ) {
-    input = 'computador';
-  }
+const createSections = async(input) => {
 
-  const listItem = await generateItems( input.value );
+  const listItem = await generateItems( input );
   listItem.forEach( async( item, index ) => {
 
     let test = await createProductItemElement( item );
@@ -145,7 +143,7 @@ const createSections = async( input ) => {
     setTimeout( () => {
       const buttonAdd = document.querySelectorAll( '.item__add' )[ index ];
       buttonAdd.addEventListener( 'click', addToCart );
-    }, 4000 );
+    }, 500 );
   } );
   sectionItem.removeChild( sectionItem.children[ 0 ] );
 };
@@ -185,6 +183,7 @@ window.onload = () => {
   loading.classList = 'loading';
   loading.innerText = 'carregando...';
   sectionItem.appendChild( loading );
+
   createSections();
 
   let input = document.getElementsByTagName( 'input' )[ 0 ];
@@ -214,10 +213,12 @@ window.onload = () => {
         localStorage.setItem( 'cartValue', cart.lastElementChild.innerHTML );
         saveCartItems( cartItems.innerHTML );
 
-        // console.log(cart.children);
-
+        cart.removeChild( cart.children[ 3 ] )
+        cart.removeChild( cart.children[ 2 ] )
+  
       } );
     }
   }
+  
   loadCartItems();
 };
