@@ -89,6 +89,10 @@ font-size: 20px;
   width: 200px;
 }
 
+a{
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
 .item .item__sku {
   display: none;
 }
@@ -181,4 +185,13 @@ align-self: center;
 
 .sku {
   display: none;
+}
+
+footer{
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #3483fa;
+  color: white;
 }

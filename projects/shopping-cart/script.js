@@ -23,8 +23,6 @@ async function createProductItemElement( { sku, name, image } ) {
 
   section.appendChild( createCustomElement( 'span', 'price', `R$ ${obj.price}` ) );
 
-
-
   section.appendChild( createCustomElement( 'button', 'item__add', 'Adicionar ao carrinho!' ) );
 
   return section;
@@ -56,8 +54,10 @@ async function createCartItemElement( { sku, name, salePrice } ) {
   let obj = await fetchItem( sku );
   const div = document.createElement( 'div' );
   div.className = 'cart__item';
-  div.innerHTML = `<img src="${obj.thumbnail}" alt=""><div class='sku'>${sku}</div>${name}<br><br>Valor do item: R$${salePrice}<br><button>Remover</button>`;
-  div.children[ 5 ].addEventListener( 'click', cartItemClickListener );
+  div.innerHTML = `<img src="${obj.thumbnail}" alt=""><div class='sku'>${sku}</div>${`<a href="${obj.permalink}" target="_blank">${name}</a>`}<br><br>Valor do item: R$${salePrice}<br><button>Remover</button>`;
+  div.children[ 6 ].addEventListener( 'click', cartItemClickListener );
+
+
   return div;
 }
 
@@ -95,7 +95,7 @@ const addToCart = async( event ) => {
     btnClear.innerHTML = 'Esvaziar Carrinho'
     btnClear.classList = 'empty-cart';
     cart.appendChild( btnClear );
-    btnClear.addEventListener( 'click', ( ) => {
+    btnClear.addEventListener( 'click', () => {
       for ( let index = 0; index < cartItems.children.length; index = 0 ) {
         cartItems.removeChild( cartItems.children[ index ] );
       }
@@ -118,8 +118,8 @@ const addToCart = async( event ) => {
 
 
 const generateItems = async( input = 'chocolate' ) => {
-  const items = await fetchProducts( [ input ] );
-  const newItems = [ ];
+  const items = await fetchProducts( input );
+  const newItems = [];
 
   for ( let index = 0; index < 44; index++ ) {
     const sku = items.results[ index ].id;
@@ -142,21 +142,19 @@ const createSections = async( input ) => {
 
     let test = await createProductItemElement( item );
     sectionItem.appendChild( test );
-    setTimeout( ( ) => {
+    setTimeout( () => {
       const buttonAdd = document.querySelectorAll( '.item__add' )[ index ];
       buttonAdd.addEventListener( 'click', addToCart );
-    }, 1000 );
+    }, 4000 );
   } );
   sectionItem.removeChild( sectionItem.children[ 0 ] );
 };
 
-const loadCartItems = ( ) => {
-  cartItems.innerHTML = getSavedCartItems( );
-
-  // console.log(cartItems.children[0].children[4]);
+const loadCartItems = () => {
+  cartItems.innerHTML = getSavedCartItems();
 
   for ( let index = 0; index < cartItems.children.length; index += 1 ) {
-    cartItems.children[ index ].children[ 5 ].addEventListener( 'click', cartItemClickListener );
+    cartItems.children[ index ].children[ 6 ].addEventListener( 'click', cartItemClickListener );
   }
 
   const container = document.createElement( 'div' );
@@ -170,7 +168,7 @@ const loadCartItems = ( ) => {
 
 if ( document.querySelector( '.empty-cart' ) ) {
   const clearButton = document.querySelector( '.empty-cart' );
-  clearButton.addEventListener( 'click', ( ) => {
+  clearButton.addEventListener( 'click', () => {
     for ( let index = 0; index < cartItems.children.length; index = 0 ) {
       cartItems.removeChild( cartItems.children[ index ] );
     }
@@ -182,12 +180,12 @@ if ( document.querySelector( '.empty-cart' ) ) {
   } );
 }
 
-window.onload = ( ) => {
+window.onload = () => {
   const loading = document.createElement( 'p' );
   loading.classList = 'loading';
   loading.innerText = 'carregando...';
   sectionItem.appendChild( loading );
-  createSections( );
+  createSections();
 
   let input = document.getElementsByTagName( 'input' )[ 0 ];
   input.addEventListener( 'keypress', ( event ) => {
@@ -207,7 +205,7 @@ window.onload = ( ) => {
       btnClear.innerHTML = 'Esvaziar Carrinho'
       btnClear.classList = 'empty-cart';
       cart.appendChild( btnClear );
-      btnClear.addEventListener( 'click', ( ) => {
+      btnClear.addEventListener( 'click', () => {
         for ( let index = 0; index < cartItems.children.length; index = 0 ) {
           cartItems.removeChild( cartItems.children[ index ] );
         }
@@ -221,5 +219,5 @@ window.onload = ( ) => {
       } );
     }
   }
-  loadCartItems( );
+  loadCartItems();
 };
