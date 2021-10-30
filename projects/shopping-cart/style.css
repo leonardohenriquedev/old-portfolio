@@ -142,6 +142,7 @@ a{
 .cart__item img{
 width: 35%;
 align-self: center;
+margin-bottom: 10px;
 }
 
 .cart__item button {
@@ -161,6 +162,7 @@ align-self: center;
   font-size: 16pt;
   text-align: center;
   display: none;
+
 }
 
 .empty-cart {

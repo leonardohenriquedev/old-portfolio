@@ -1,3 +1,9 @@
+const numberToMoeda = ( num ) => {
+  if ( isNaN( num ) ) return "NaN";
+  num = parseFloat( num );
+  return num.toLocaleString( "pt-br", { style: "currency", currency: "BRL" } );
+};
+
 function createProductImageElement( imageSource ) {
   const img = document.createElement( 'img' );
   img.className = 'item__image';
@@ -21,7 +27,7 @@ async function createProductItemElement( { sku, name, image } ) {
   section.appendChild( createProductImageElement( image ) );
   section.appendChild( createCustomElement( 'span', 'item__title', name ) );
 
-  section.appendChild( createCustomElement( 'span', 'price', `R$ ${obj.price}` ) );
+  section.appendChild( createCustomElement( 'span', 'price', `${numberToMoeda(obj.price)}` ) );
 
   section.appendChild( createCustomElement( 'button', 'item__add', 'Adicionar ao carrinho!' ) );
 
@@ -43,7 +49,7 @@ async function cartItemClickListener( event ) {
 
   cart.lastElementChild
     .lastElementChild
-    .innerText = ( Number( cart.lastElementChild.lastElementChild.innerText ) - id.price ).toFixed( 2 );
+    .innerText = ( Number( cart.lastElementChild.lastElementChild.innerText ) - id.price );
 
   localStorage.setItem( 'cartValue', cart.lastElementChild.innerHTML );
 

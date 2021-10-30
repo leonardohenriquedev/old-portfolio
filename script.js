@@ -56,3 +56,11 @@ function shuffleArray(array) {
 
   return array;
 }
+
+const numberToMoeda = (num) => {
+  if (isNaN(num)) return "NaN";
+  num = parseFloat(num);
+  return num.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
+};
+
+console.log(numberToMoeda(1));
